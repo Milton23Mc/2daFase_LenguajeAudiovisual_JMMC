@@ -1,9 +1,10 @@
 import { Libro } from "../Entities/Libro";
+import { ILibroService } from "../Interfaces/ILibroService";
 import { LibroRepository } from "../Repositories/LibroRepository";
 import { AutorService } from "./AutorService";
 
 
-export class LibroService {
+export class LibroService implements ILibroService{
     constructor(private libroRepository: LibroRepository, private autorService: AutorService) {}
 
     agregarLibro(titulo: string, autorId: number): Libro {
