@@ -1,0 +1,34 @@
+Enunciado:
+El objetivo es construir un pequeño sistema para gestionar una biblioteca. Esta biblioteca tiene libros y autores. Queremos tener la capacidad de agregar libros, obtener detalles de un libro, agregar autores y obtener detalles de un autor.
+
+Estructura y Funcionalidad:
+Modelos: Tenemos dos entidades principales, que son Autor y Libro.
+
+Autor: Representa a una persona que escribe libros. Cada autor tiene un id, un nombre y una fechaNacimiento.
+Libro: Representa una obra escrita. Cada libro tiene un id, un titulo y un autorId (que relaciona el libro con un autor).
+Servicios: Contienen la lógica principal de nuestra aplicación.
+
+AutorService: Permite agregar autores y obtener detalles de un autor específico a partir de su ID.
+LibroService: Permite agregar libros y obtener detalles de un libro específico a partir de su ID.
+Principal (Main): Es donde inicializamos y usamos nuestros servicios para agregar y obtener autores y libros. Es el punto de entrada de nuestra aplicación.
+
+Funcionamiento Interno:
+El sistema funciona en memoria, lo que significa que no se guarda nada en una base de datos ni se conserva la información después de que se cierra el programa.
+
+Agregar un Autor/Libro: Al agregar un autor o libro, simplemente estamos añadiendo una instancia de Autor o Libro a un array en memoria dentro de su respectivo servicio.
+
+Obtener un Autor/Libro: Al solicitar un autor o libro por ID, el servicio simplemente busca en el array en memoria y devuelve la instancia correspondiente (si existe).
+
+¿Qué soluciona este ejemplo?
+Este ejemplo básico proporciona una estructura para:
+
+Representar Entidades: Autor y Libro son las representaciones básicas de entidades del mundo real en nuestra aplicación.
+Realizar Operaciones Básicas: Permite agregar y recuperar autores y libros.
+Organizar el Código: A pesar de su simplicidad, el código está organizado en modelos y servicios, lo que proporciona una base para expandir y agregar más funcionalidades en el futuro.
+Limitaciones y Simplificaciones:
+En memoria: Todo está en memoria, lo que significa que si el programa se cierra, se pierde toda la información.
+No hay validaciones: Podemos añadir autores o libros con información faltante o incorrecta.
+No hay persistencia: En aplicaciones reales, probablemente querríamos guardar esta información en una base de datos para que persista entre ejecuciones.
+Funcionalidad Limitada: Sólo se pueden realizar operaciones muy básicas. En una biblioteca real, podríamos querer buscar libros por título, autor, género, etc., prestar libros, registrar usuarios y más.
+Conclusión:
+El ejemplo proporciona una base sobre cómo estructurar y organizar el código en una aplicación simple. Sirve como punto de partida para alguien que está aprendiendo cómo diseñar y estructurar aplicaciones, y puede ser ampliado y mejorado para adaptarse a necesidades más complejas.
